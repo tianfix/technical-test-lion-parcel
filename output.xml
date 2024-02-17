@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-17T11:05:31.873933" rpa="false" schemaversion="5">
+<suite id="s1" name="GET" source="D:\Automation\python\technical-test\Tests\API\GET.robot">
+<test id="s1-t1" name="GET_Single User: Should return success with code 200" line="12">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-17T11:05:32.530291" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-17T11:05:32.530291" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 17 Feb 2024 04:05:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707736409&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=oxov9wEkAP2MlLehdTbrxjD%2FD5w2MnhaEfNNcePFY1U%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707736409&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=oxov9wEkAP2MlLehdTbrxjD%2FD5w2MnhaEfNNcePFY1U%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '4864', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '856b270adff74102-SIN', 'Content-Encoding': 'gzip'} 
+ body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg time="2024-02-17T11:05:32.531375" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${base_url}${users}/${param_user_id}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-17T11:05:32.095624" elapsed="0.435812"/>
+</kw>
+<status status="PASS" start="2024-02-17T11:05:32.095624" elapsed="0.435812"/>
+</test>
+<test id="s1-t2" name="GET_Single User: Validate JSON Schema" line="15">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-17T11:05:32.887029" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-17T11:05:32.887029" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 17 Feb 2024 04:05:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707899142&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=aU2ZKCdOupPBmHZrBAPHZxoW1K1JJlUJXct0zDZ455U%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707899142&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=aU2ZKCdOupPBmHZrBAPHZxoW1K1JJlUJXct0zDZ455U%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '1985', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '856b270d1c9f48e8-SIN', 'Content-Encoding': 'gzip'} 
+ body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg time="2024-02-17T11:05:32.887029" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${base_url}${users}/${param_user_id}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-17T11:05:32.533667" elapsed="0.353362"/>
+</kw>
+<kw name="Validate Json By Schema File" owner="JSONLibrary">
+<arg>${response.json()}</arg>
+<arg>D:\\Automation\\python\\technical-test\\Tests\\API${/}json${/}get_single_user_schema.json</arg>
+<doc>Validate json object by json schema file.
+Arguments:
+    - json_object: json as a dictionary object.
+    - json_path: path to file with json schema</doc>
+<status status="PASS" start="2024-02-17T11:05:32.889189" elapsed="0.018362"/>
+</kw>
+<status status="PASS" start="2024-02-17T11:05:32.532526" elapsed="0.375025"/>
+</test>
+<test id="s1-t3" name="GET_Single User: Should return same passed user id" line="19">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-17T11:05:33.267464" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-17T11:05:33.267520" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 17 Feb 2024 04:05:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707889827&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=u3fLWQLuPepRz0y76FiHbZjpoL%2FklJ0dlt1BylgHzAU%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707889827&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=u3fLWQLuPepRz0y76FiHbZjpoL%2FklJ0dlt1BylgHzAU%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '604', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '856b270f7c66896a-SIN', 'Content-Encoding': 'gzip'} 
+ body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg time="2024-02-17T11:05:33.267520" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${base_url}${users}/${param_user_id}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-17T11:05:32.909807" elapsed="0.357713"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2024-02-17T11:05:33.294740" level="INFO">${response_user_id} = [2]</msg>
+<var>${response_user_id}</var>
+<arg>${response.json()}</arg>
+<arg>$.data.id</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2024-02-17T11:05:33.267520" elapsed="0.027220"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-02-17T11:05:33.295826" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response_user_id[0]}</arg>
+<arg>${param_user_id}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-02-17T11:05:33.295826" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-17T11:05:32.909807" elapsed="0.387075"/>
+</test>
+<test id="s1-t4" name="GET_Single User: Should return 404 when user not found" line="24">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-17T11:05:33.993162" level="INFO">GET Request : url=https://reqres.in/api/users/23 
+ path_url=/api/users/23 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-17T11:05:33.994298" level="INFO">GET Response : url=https://reqres.in/api/users/23 
+ status=404, reason=Not Found 
+ headers={'Date': 'Sat, 17 Feb 2024 04:05:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1708142733&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=zvMXU5Ym8albWL0j0kq%2FE2m0ZqhzRsppKHLyQpvMRo8%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1708142733&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=zvMXU5Ym8albWL0j0kq%2FE2m0ZqhzRsppKHLyQpvMRo8%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'EXPIRED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '856b2711defa601b-SIN'} 
+ body={} 
+ </msg>
+<msg time="2024-02-17T11:05:33.994298" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<var>${response}</var>
+<arg>${base_url}${users}/${invalid_user_id}</arg>
+<arg>expected_status=404</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-17T11:05:33.297982" elapsed="0.696316"/>
+</kw>
+<status status="PASS" start="2024-02-17T11:05:33.297982" elapsed="0.697553"/>
+</test>
+<test id="s1-t5" name="GET_Single User: Should return correct support url" line="27">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-17T11:05:34.368454" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-17T11:05:34.369696" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 17 Feb 2024 04:05:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707899142&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=aU2ZKCdOupPBmHZrBAPHZxoW1K1JJlUJXct0zDZ455U%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707899142&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=aU2ZKCdOupPBmHZrBAPHZxoW1K1JJlUJXct0zDZ455U%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '1986', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '856b27165d576005-SIN', 'Content-Encoding': 'gzip'} 
+ body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg time="2024-02-17T11:05:34.369696" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${base_url}${users}/${param_user_id}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-17T11:05:34.000242" elapsed="0.369454"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2024-02-17T11:05:34.386037" level="INFO">${responseSupportUrl} = ['https://reqres.in/#support-heading']</msg>
+<var>${responseSupportUrl}</var>
+<arg>${response.json()}</arg>
+<arg>$.support.url</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2024-02-17T11:05:34.369696" elapsed="0.016341"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${responseSupportUrl[0]}</arg>
+<arg>${supportUrl}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-02-17T11:05:34.387049" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-17T11:05:33.999110" elapsed="0.387939"/>
+</test>
+<test id="s1-t6" name="GET_Single User: Should return correct support text" line="32">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-17T11:05:34.745405" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-17T11:05:34.745405" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 17 Feb 2024 04:05:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707889827&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=u3fLWQLuPepRz0y76FiHbZjpoL%2FklJ0dlt1BylgHzAU%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707889827&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=u3fLWQLuPepRz0y76FiHbZjpoL%2FklJ0dlt1BylgHzAU%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '606', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '856b2718ac194d21-SIN', 'Content-Encoding': 'gzip'} 
+ body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg time="2024-02-17T11:05:34.745405" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${base_url}${users}/${param_user_id}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-17T11:05:34.389157" elapsed="0.356248"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2024-02-17T11:05:34.767360" level="INFO">${responseSupportText} = ['To keep ReqRes free, contributions towards server costs are appreciated!']</msg>
+<var>${responseSupportText}</var>
+<arg>${response.json()}</arg>
+<arg>$.support.text</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2024-02-17T11:05:34.746444" elapsed="0.020916"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${responseSupportText[0]}</arg>
+<arg>${supportText}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-02-17T11:05:34.767360" elapsed="0.001089"/>
+</kw>
+<status status="PASS" start="2024-02-17T11:05:34.389096" elapsed="0.379353"/>
+</test>
+<status status="PASS" start="2024-02-17T11:05:31.876043" elapsed="2.894769"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="GET">GET</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-02-17T11:05:32.093453" level="ERROR">Error in file 'D:\Automation\python\technical-test\Tests\API\GET.robot' on line 8: Resource file '..\..\Resources\PageObject\Keywords\APICommon.resource' does not exist.</msg>
+</errors>
+</robot>
